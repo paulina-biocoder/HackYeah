@@ -18,10 +18,13 @@
     "google-map-react": "^2.2.1",
     "google-maps-react-markers": "^2.0.0",
     "leaflet": "^1.9.4",
+    "localforage": "^1.10.0",
+    "match-sorter": "^6.3.1",
     "react": "^18.2.0",
     "react-aria": "^3.28.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.68.0",
+    "react-router-dom": "^6.16.0",
+    "sort-by": "^1.2.0",
     "swr": "^2.2.4"
   },
   "devDependencies": {
@@ -34,6 +37,7 @@
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "sass": "^1.68.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.9"
   }
