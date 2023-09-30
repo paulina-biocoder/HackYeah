@@ -52,11 +52,15 @@ export function Map() {
         onChange={(map) => console.log("Map moved", map)}
         // center={coords}
       >
-        <MyMarker lat={coords.lat} lng={coords.lng} />
         {places?.map((place) => (
           <PlacesMarker key={place.id} lat={place.lat} lng={place.lng} />
         ))}
+        <MyMarker lat={coords.lat} lng={coords.lng} />
       </GoogleMapReact>
+
+
     </div>
   );
 }
+
+
