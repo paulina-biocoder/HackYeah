@@ -3,7 +3,7 @@ import shutil
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATABASE_PATH = os.path.join(BASE_DIR, 'backend/db.sqlite3')
-print(DATABASE_PATH)
+
 # Remove SQLite database if it exists
 if os.path.exists(DATABASE_PATH):
     os.remove(DATABASE_PATH)
