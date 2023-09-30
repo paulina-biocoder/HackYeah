@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.tsx";
 import "./index.css";
 import { Drawer } from "./features/drawer/Drawer.tsx";
+import { ProjectItem } from "./features/map/components/ProjectItem.tsx";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
     path: "/place",
     element: <div>sme place</div>,
   },
+  {
+    path: "/project-item/:id",
+    element: <ProjectItem />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
