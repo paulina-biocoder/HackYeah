@@ -1,8 +1,8 @@
 // import GoogleMapReact from 'google-map-react'
 import "./App.css";
-import { Map } from "./features/map/Map";
-import { Drawer } from "./features/map/components/drawer/Drawer";
-import { MapContainer, TileLayer, useMap } from "react-leaflet";
+import { Map } from "./features/map/Map3";
+// import { Drawer } from "./features/map/components/drawer/Drawer";
+// import { MapContainer, TileLayer, useMap } from "react-leaflet";
 
 // const apikey = 'AIzaSyCKImaG10Oo2c-ETqEVlrQY55j3r25pWctI'
 
@@ -18,12 +18,11 @@ function App() {
   return (
     // Important! Always set the container height explicitly
     <>
+      {/* <div style={{ border: "1px solid red", height: "300px" }}> */}
+      {/* asdf drawer */}
       <Map />
-      {/* <div style={{ border: "1px solid red", height: "100px" }}>
-        asdf drawer
-        <Drawer />
-      </div> */}
-
+      {/* <Drawer /> */}
+      {/* </div> */}
     </>
   );
 }
