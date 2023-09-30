@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'places',
     'accounts',
     'corsheaders',
+    'titbits',
 ]
 
 MIDDLEWARE = [
