@@ -8,7 +8,13 @@ from accounts.models import User
 from places.models import Category, Place
 
 # Add a user
-user = User.objects.create_user(email='testuser@example.com', password='testpassword', name='Test', surname='User', nickname='TestNick')
+user = User.objects.create_user(
+    email='testuser23@example.com',
+    password='testpassword',
+    name='Test',
+    surname='User',
+    nickname='TestNick'
+)
 
 # Add some categories
 category1 = Category.objects.create(name='Museum')
