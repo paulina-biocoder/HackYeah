@@ -18,12 +18,11 @@ function App() {
   return (
     // Important! Always set the container height explicitly
     <>
+      {/* <div style={{ border: "1px solid red", height: "300px" }}> */}
+      {/* asdf drawer */}
       <Map />
-      {/* <div style={{ border: "1px solid red", height: "100px" }}>
-        asdf drawer
-        <Drawer />
-      </div> */}
-
+      {/* <Drawer /> */}
+      {/* </div> */}
     </>
   );
 }
