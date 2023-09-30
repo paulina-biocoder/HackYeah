@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'accounts',
     'corsheaders',
     'titbits',
+    'quiz',
 ]
 
 MIDDLEWARE = [
