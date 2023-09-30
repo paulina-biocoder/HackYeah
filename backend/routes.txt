@@ -1,0 +1,80 @@
+Places:
+GET    http://127.0.0.1:8000/places/
+POST   http://127.0.0.1:8000/places/
+	{
+    "name": "Some Place XDD",
+    "latitude": "12.345678",
+    "longitude": "98.765432",
+    "added_by": 1,
+    "is_visible": true,
+    "price": "10.00",
+    "category": 1
+}
+
+
+GET    http://127.0.0.1:8000/places/<id>/
+PUT    http://127.0.0.1:8000/places/<id>/
+	{
+    "name": "XDDD",
+    "latitude": "12.345678",
+    "longitude": "98.765432",
+    "added_by": 1,
+    "is_visible": true,
+    "price": "10.00",
+    "category": 1
+}
+PATCH  http://127.0.0.1:8000/places/<id>/
+	{
+    "name": "2137"
+}
+DELETE http://127.0.0.1:8000/places/<id>/
+
+
+
+
+
+Categories:
+GET   http://127.0.0.1:8000/categories/
+POST  http://127.0.0.1:8000/categories/
+{
+    "name": "New Category Name"
+}
+
+GET    http://127.0.0.1:8000/categories/<id>/
+PUT    http://127.0.0.1:8000/categories/<id>/
+{
+    "name": "Updated Category Name"
+}
+PATCH  http://127.0.0.1:8000/categories/<id>/
+{
+    "name": "2137"
+}
+DELETE http://127.0.0.1:8000/categories/<id>/
+
+
+
+
+
+
+
+Titbits:
+GET   http://127.0.0.1:8000/titbits/
+POST  hhttp://127.0.0.1:8000/titbits/
+{
+    "description": "Did you know that ...",
+    "place": 3
+}
+
+
+GET    http://127.0.0.1:8000/titbits/<id>/
+PUT    http://127.0.0.1:8000/titbits/<id>/
+{
+    "description": "XDDDD",
+    "place": 3
+}
+
+PATCH  http://127.0.0.1:8000/titbits/<id>/
+{
+    "description": "2137"
+}
+DELETE http://127.0.0.1:8000/titbits/<id>/

@@ -8,9 +8,10 @@ export function PlacesMarker({ lat, lng }: LatLng) {
     <div
       style={{
         background: "green",
+        border: '1px solid blue',
         borderRadius: "10px",
-        width: "10px",
-        height: "10px",
+        width: "20px",
+        height: "20px",
       }}
     />
   );
