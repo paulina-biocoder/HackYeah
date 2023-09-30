@@ -62,5 +62,19 @@ GET   http://127.0.0.1:8000/titbits/
 POST  hhttp://127.0.0.1:8000/titbits/
 {
     "description": "Did you know that ...",
-    "place_id": 3
+    "place": 3
 }
+
+
+GET    http://127.0.0.1:8000/titbits/<id>/
+PUT    http://127.0.0.1:8000/titbits/<id>/
+{
+    "description": "XDDDD",
+    "place": 3
+}
+
+PATCH  http://127.0.0.1:8000/titbits/<id>/
+{
+    "description": "2137"
+}
+DELETE http://127.0.0.1:8000/titbits/<id>/
