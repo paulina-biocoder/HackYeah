@@ -22,7 +22,7 @@
 
 5. **Make migrations for the apps:**
    \```
-   python manage.py makemigrations places titbits accounts
+   python manage.py makemigrations
    \```
 
 6. **Apply the migrations:**
@@ -32,10 +32,10 @@
 
 ## In case of issues:
 
-- Remove `db.sqlite`
-- Remove all `__pycache__` and `migrations` directories in all apps:
-  \```
-  python manage.py makemigrations places titbits accounts
-  python manage.py migrate
+  python cleanup.py
+
+  python manage.py runserver   - and stop server just after run
+
+  python execute_migrations.py
+
   python seed_data.py
-  \```

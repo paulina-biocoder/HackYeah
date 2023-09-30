@@ -1,31 +1,31 @@
 Places:
 GET    http://127.0.0.1:8000/places/
 POST   http://127.0.0.1:8000/places/
-	{
-    "name": "Some Place XDD",
-    "latitude": "12.345678",
-    "longitude": "98.765432",
+{
+    "name": "Place 1",
+    "latitude": 50.067915,
+    "longitude": 19.941226,
     "added_by": 1,
     "is_visible": true,
-    "price": "10.00",
+    "project_value": "1000.50",
+    "eu_funding": "800.40",
     "category": 1
 }
-
-
 GET    http://127.0.0.1:8000/places/<id>/
 PUT    http://127.0.0.1:8000/places/<id>/
-	{
-    "name": "XDDD",
-    "latitude": "12.345678",
-    "longitude": "98.765432",
+{
+    "name": "Place 1 Updated",
+    "latitude": 50.067915,
+    "longitude": 19.941226,
     "added_by": 1,
     "is_visible": true,
-    "price": "10.00",
+    "project_value": "1100.50",
+    "eu_funding": "850.40",
     "category": 1
 }
 PATCH  http://127.0.0.1:8000/places/<id>/
-	{
-    "name": "2137"
+{
+    "name": "Place 1 Partial Update"
 }
 DELETE http://127.0.0.1:8000/places/<id>/
 
@@ -33,23 +33,56 @@ DELETE http://127.0.0.1:8000/places/<id>/
 
 
 
-Categories:
-GET   http://127.0.0.1:8000/categories/
-POST  http://127.0.0.1:8000/categories/
-{
-    "name": "New Category Name"
-}
 
+
+
+Categories:
+GET    http://127.0.0.1:8000/categories/
+POST   http://127.0.0.1:8000/categories/
+{
+    "name": "Example Category"
+}
 GET    http://127.0.0.1:8000/categories/<id>/
 PUT    http://127.0.0.1:8000/categories/<id>/
 {
-    "name": "Updated Category Name"
+    "name": "Updated Category"
 }
 PATCH  http://127.0.0.1:8000/categories/<id>/
 {
-    "name": "2137"
+    "name": "Partial Category"
 }
 DELETE http://127.0.0.1:8000/categories/<id>/
+
+
+
+
+
+
+
+
+Reviews:
+GET    http://127.0.0.1:8000/reviews/
+POST   http://127.0.0.1:8000/reviews/
+{
+    "place": 1,
+    "user": 1,
+    "comment": "Example comment",
+    "rating": 5
+}
+GET    http://127.0.0.1:8000/reviews/<id>/
+PUT    http://127.0.0.1:8000/reviews/<id>/
+{
+    "place": 2,
+    "user": 2,
+    "comment": "Updated comment",
+    "rating": 4
+}
+PATCH  http://127.0.0.1:8000/reviews/<id>/
+{
+    "comment": "Partial Comment Update"
+}
+DELETE http://127.0.0.1:8000/reviews/<id>/
+
 
 
 
@@ -64,17 +97,48 @@ POST  hhttp://127.0.0.1:8000/titbits/
     "description": "Did you know that ...",
     "place": 3
 }
-
-
 GET    http://127.0.0.1:8000/titbits/<id>/
 PUT    http://127.0.0.1:8000/titbits/<id>/
 {
     "description": "XDDDD",
     "place": 3
 }
-
 PATCH  http://127.0.0.1:8000/titbits/<id>/
 {
     "description": "2137"
 }
 DELETE http://127.0.0.1:8000/titbits/<id>/
+
+
+
+
+
+
+
+
+
+
+Users:
+GET    http://127.0.0.1:8000/accounts/
+POST   http://127.0.0.1:8000/accounts/
+{
+    "nickname": "exampleUser",
+    "name": "Example",
+    "surname": "User",
+    "email": "example@user.com",
+    "password": "securepassword123"
+}
+GET    http://127.0.0.1:8000/accounts/<id>/
+PUT    http://127.0.0.1:8000/accounts/<id>/
+{
+    "nickname": "exampleUser",
+    "name": "Example",
+    "surname": "User",
+    "email": "updated@user.com",
+    "password": "newpassword123"
+}
+PATCH  http://127.0.0.1:8000/accounts/<id>/
+{
+    "name": "Partial"
+}
+DELETE http://127.0.0.1:8000/accounts/<id>/
