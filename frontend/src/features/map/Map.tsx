@@ -4,6 +4,7 @@ import { MyMarker } from "./components/markers/MyMarker";
 import { PlacesMarker } from "./components/markers/PlacesMarker";
 import GoogleMapReact from "google-maps-react-markers";
 import { useRef, useState } from "react";
+import { Drawer } from "../drawer/Drawer";
 
 const apikey = "AIzaSyCKImaG10Oo2c-ETqEVlrQY553r25pWctI";
 
@@ -41,22 +42,25 @@ export function Map() {
 
   return (
     // Important! Always set the container height explicitly
-    <div style={{ height: "calc(100vh - 57.6px)", width: "100%" , marginBottom: '57.6px'}}>
-      <GoogleMapReact
-        apiKey={apikey}
-        defaultCenter={defaultCoords}
-        defaultZoom={defaultZoom}
-        options={{ center: coords }}
-        onGoogleApiLoaded={onGoogleApiLoaded}
-        onChange={(map) => console.log("Map moved", map)}
-        // center={coords}
-      >
-        {places?.map((place) => (
-          <PlacesMarker key={place.id} lat={place.lat} lng={place.lng} />
-        ))}
-        <MyMarker lat={coords.lat} lng={coords.lng} />
-      </GoogleMapReact>
-    </div>
+    <>
+        <div style={{ height: "calc(100vh - 57.6px)", width: "100%" , marginBottom: '57.6px'}}>
+            <GoogleMapReact
+                apiKey={apikey}
+                defaultCenter={defaultCoords}
+                defaultZoom={defaultZoom}
+                options={{ center: coords }}
+                onGoogleApiLoaded={onGoogleApiLoaded}
+                onChange={(map) => console.log("Map moved", map)}
+                // center={coords}
+            >
+                {places?.map((place) => (
+                <PlacesMarker key={place.id} lat={place.lat} lng={place.lng} />
+                ))}
+                <MyMarker lat={coords.lat} lng={coords.lng} />
+            </GoogleMapReact>
+        </div>
+        <Drawer />
+    </>
   );
 }
 

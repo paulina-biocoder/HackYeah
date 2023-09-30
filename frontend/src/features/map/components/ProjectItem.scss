@@ -27,6 +27,17 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
+
+        &-star {
+            margin-right: 4px;
+        }
+
+        &-dot {
+            margin: 0 6px;
+        }
+
+        &-dot {
+        }
     }
 
     &-city {
@@ -42,6 +53,14 @@
             align-items: center;
             gap: 8px;
             border: 1.5px solid var(--primary-500, #22c55e);
+            background: none;
+            color: var(--gray-800, #333f51);
+            /* text-md/Semibold */
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 24px; /* 150% */
 
             &--active {
                 background: var(--primary-300, #86efac);
@@ -59,6 +78,9 @@
     }
 
     &-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         padding: 0 24px;
     }
 
@@ -73,6 +95,7 @@
 
         &-item {
             display: flex;
+            align-items: flex-start;
 
             &-text {
                 display: flex;
@@ -104,18 +127,39 @@
     }
 
     &-description {
-        max-height: 217px;
-        overflow: hidden;
+        color: var(--ink-normal, #252525);
         text-overflow: ellipsis;
+        /* text-md/Regular */
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+        text-align: left;
 
-        &--unfolded {
-            max-height: unset;
+        &-title {
+            color: #000;
+            /* text-xl/Bold */
+            font-family: Poppins;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px; /* 150% */
+            text-align: left;
         }
     }
 
     &-read-more {
         border: none;
         background: none;
+        padding: 0;
         text-decoration: underline;
+        color: var(--ink-normal, #252525);
+        /* text-md/Bold */
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px; /* 150% */
     }
 }

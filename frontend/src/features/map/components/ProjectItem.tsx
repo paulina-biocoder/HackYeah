@@ -3,6 +3,16 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./ProjectItem.scss";
 
+function foldText(text: string) {
+    return text.slice(0, 350) + "...";
+}
+
+
+const PLN = new Intl.NumberFormat('pl-PL', {
+    style: 'currency',
+    currency: 'PLN',
+});
+
 export function ListItem(
     {
         iconSrc,
@@ -20,7 +30,7 @@ export function ListItem(
             <span className="project-item-list-item-title">
                 {title}
             </span>
-            <span className="project-item-list-description">
+            <span className="project-item-list-item-description">
                 {description}
             </span>
         </div>
@@ -58,6 +68,12 @@ export function ProjectItem() {
         }, 100)
     }, []);
 
+    useEffect(() => {
+        if (itemData && itemData.description.length <= 350) {
+            setReadMore(true);
+        }
+    }, [itemData]);
+
     if (itemData === null) return null;
 
     return (
@@ -66,11 +82,10 @@ export function ProjectItem() {
             <section className="project-item-section">
                 <h1 className="project-item-title">{itemData.title}</h1>
                 <div className="project-item-stats">
-                    <img src="/star-filled.svg" alt="" aria-hidden width={15} height={15} />
-                    <span>{itemData.rating.toFixed(2)}</span>
-                    <img src="/dot.svg" alt="" aria-hidden width={2} height={2} />
-                    <span>({itemData.ratingAmount})</span>
-                    <span className="project-item-city">({itemData.city})</span>
+                    <img className="project-item-stats-star" src="/star-filled.svg" alt="" aria-hidden width={15} height={15} />
+                    <span>{itemData.rating.toFixed(2)} ({itemData.ratingAmount})</span>
+                    <img className="project-item-stats-dot" src="/dot.svg" alt="" aria-hidden width={2} height={2} />
+                    <span className="project-item-city">{itemData.city}</span>
                 </div>
                 <div className="project-item-button-row">
                     <button className={classNames("project-item-button-green", itemData.toSee && ("project-item-button-green--active"))}>
@@ -92,19 +107,19 @@ export function ProjectItem() {
                     ></ListItem>
                     <ListItem
                         iconSrc="/money.svg"
-                        title={itemData.projectCost}
+                        title={PLN.format(itemData.projectCost)}
                         description="Wartość projektu"
                     ></ListItem>
                     <ListItem
                         iconSrc="/hand-money.svg"
-                        title={itemData.projectCostEU}
+                        title={PLN.format(itemData.projectCostEU)}
                         description="W tym z dofinansowania z UE"
                     ></ListItem>
                 </ul>
             </section>
             <section className="project-item-section">
-                <h2 className="project-item-description">About the project</h2>
-                <p className={classNames("project-item-description", readMore && "project-item-description--unfolded")}>{itemData.description}</p>
+                <h2 className="project-item-description-title">About the project</h2>
+                <p className="project-item-description">{readMore ? itemData.description : foldText(itemData.description)}</p>
                 {!readMore && <button className="project-item-read-more" onClick={() => { setReadMore(true) }}>read more</button>}
             </section>
         </div>
