@@ -7,8 +7,6 @@ import { useRef, useState } from "react";
 
 const apikey = "AIzaSyCKImaG10Oo2c-ETqEVlrQY553r25pWctI";
 
-// const AnyReactComponent = ({ text }) => <div>{text}</div>;
-
 export type LatLng = {
   lat: number;
   lng: number;
@@ -43,7 +41,7 @@ export function Map() {
 
   return (
     // Important! Always set the container height explicitly
-    <div style={{ height: "100vh", width: "100%" }}>
+    <div style={{ height: "calc(100vh - 60px)", width: "100%" , marginBottom: '60px'}}>
       <GoogleMapReact
         apiKey={apikey}
         defaultCenter={defaultCoords}
