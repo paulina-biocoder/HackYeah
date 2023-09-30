@@ -1,0 +1,165 @@
+.project-item {
+    background-color: white;
+
+    &-image {
+        object-fit: cover;
+        width: 100%;
+        max-height: 500px;
+    }
+
+    &-title {
+        color: #000;
+        font-family: Poppins;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 32px; /* 133.333% */
+        text-align: left;
+    }
+
+    &-stats {
+        color: var(--ink-normal, #252525);
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px; /* 150% */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        &-star {
+            margin-right: 4px;
+        }
+
+        &-dot {
+            margin: 0 6px;
+        }
+
+        &-dot {
+        }
+    }
+
+    &-city {
+        text-decoration: underline;
+    }
+
+    &-button {
+        &-green {
+            border-radius: 9999px;
+            display: flex;
+            padding: 8px 24px 8px 16px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            border: 1.5px solid var(--primary-500, #22c55e);
+            background: none;
+            color: var(--gray-800, #333f51);
+            /* text-md/Semibold */
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 24px; /* 150% */
+
+            &--active {
+                background: var(--primary-300, #86efac);
+                border: 1.5px solid var(--primary-300, #86efac);
+            }
+        }
+
+        &-row {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 4px;
+            margin-top: 24px;
+        }
+    }
+
+    &-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 24px;
+    }
+
+    &-section:not(:last-child) {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #dedede;
+    }
+
+    &-list {
+        list-style: none;
+        padding: 0;
+
+        &-item {
+            display: flex;
+            align-items: flex-start;
+
+            &-text {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-left: 15px;
+            }
+
+            &-title {
+                color: var(--ink-normal, #252525);
+                font-family: Poppins;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 24px; /* 150% */
+                text-align: left;
+            }
+
+            &-description {
+                margin-top: 2px;
+                color: var(--ink-standard, #717171);
+                font-family: Poppins;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px; /* 142.857% */
+            }
+        }
+    }
+
+    &-description {
+        color: var(--ink-normal, #252525);
+        text-overflow: ellipsis;
+        /* text-md/Regular */
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+        text-align: left;
+
+        &-title {
+            color: #000;
+            /* text-xl/Bold */
+            font-family: Poppins;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px; /* 150% */
+            text-align: left;
+        }
+    }
+
+    &-read-more {
+        border: none;
+        background: none;
+        padding: 0;
+        text-decoration: underline;
+        color: var(--ink-normal, #252525);
+        /* text-md/Bold */
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px; /* 150% */
+    }
+}
