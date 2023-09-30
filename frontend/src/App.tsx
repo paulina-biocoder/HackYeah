@@ -1,8 +1,8 @@
 // import GoogleMapReact from 'google-map-react'
 import "./App.css";
-import { Map } from "./features/map/Map";
-import { Drawer } from "./features/map/components/drawer/Drawer";
-import { MapContainer, TileLayer, useMap } from "react-leaflet";
+import { Map } from "./features/map/Map3";
+// import { Drawer } from "./features/map/components/drawer/Drawer";
+// import { MapContainer, TileLayer, useMap } from "react-leaflet";
 
 // const apikey = 'AIzaSyCKImaG10Oo2c-ETqEVlrQY55j3r25pWctI'
 
