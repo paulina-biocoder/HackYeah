@@ -41,13 +41,12 @@ export function Map() {
 
   return (
     // Important! Always set the container height explicitly
-    <div style={{ height: "calc(100vh - 60px)", width: "100%" , marginBottom: '60px'}}>
+    <div style={{ height: "calc(100vh - 57.6px)", width: "100%" , marginBottom: '57.6px'}}>
       <GoogleMapReact
         apiKey={apikey}
         defaultCenter={defaultCoords}
         defaultZoom={defaultZoom}
         options={{ center: coords }}
-        mapMinHeight="100vh"
         onGoogleApiLoaded={onGoogleApiLoaded}
         onChange={(map) => console.log("Map moved", map)}
         // center={coords}
@@ -57,8 +56,6 @@ export function Map() {
         ))}
         <MyMarker lat={coords.lat} lng={coords.lng} />
       </GoogleMapReact>
-
-
     </div>
   );
 }
