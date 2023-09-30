@@ -1,1 +1,1 @@
-# EU-funds-GO
+# HackYeah
