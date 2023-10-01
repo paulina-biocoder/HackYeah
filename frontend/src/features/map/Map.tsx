@@ -21,7 +21,7 @@ export function Map() {
   const { places } = usePlaces();
   console.log("--- laces", places);
   const mapRef = useRef(null);
-  const [mapReady, setMapReady] = useState(false);
+  const [_mapReady, setMapReady] = useState(false);
   const [selectedPlace, setSelectedPlace] = useState<PlaceClient>();
 
   /**
@@ -29,7 +29,7 @@ export function Map() {
    * @param {Object} map - reference to the map instance
    * @param {Object} maps - reference to the maps library
    */
-  const onGoogleApiLoaded = ({ map, maps }) => {
+  const onGoogleApiLoaded = ({ map}: any) => {
     mapRef.current = map;
     setMapReady(true);
   };

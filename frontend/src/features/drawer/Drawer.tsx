@@ -1,21 +1,7 @@
-import Modal from "@mui/material/Modal";
 import { useState } from "react";
 import "./Drawer.scss";
 import classNames from "classnames";
-import { useNavigate } from "react-router-dom";
 
-function QuizModal({ onClose }: { onClose: () => void }) {
-  return (
-    <Modal
-      open={true}
-      onClose={onClose}
-      aria-labelledby="modal-modal-title"
-      aria-describedby="modal-modal-description"
-    >
-      <div></div>
-    </Modal>
-  );
-}
 
 function DrawerItem({
   onClick,
@@ -52,7 +38,7 @@ export function Drawer() {
   const navigate = (path: string) => {
     window.location.pathname = path
   }
-  const [tab, setTab] = useState<
+  const [tab] = useState<
     "map" | "quiz" | "challenges" | "rewards" | "profile" | null
   >(null);
 

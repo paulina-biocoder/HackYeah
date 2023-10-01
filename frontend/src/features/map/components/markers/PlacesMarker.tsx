@@ -1,7 +1,7 @@
 export type PlaceMarker = {
   lat: number;
   lng: number;
-  onClick: (item) => void
+  onClick: (item: any) => void
 };
 export function PlacesMarker({ lat, lng, onClick }: PlaceMarker) {
   console.log({ lat, lng });

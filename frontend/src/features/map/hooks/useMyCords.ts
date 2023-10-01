@@ -33,10 +33,6 @@ export function useMyCords() {
     console.log("coords", coords);
   }, []);
 
-  const coords1: LatLng = {
-    lat: 10.990000,
-    lng: 77.010000,
-  };
 
   return {
     // coords: coords1,
