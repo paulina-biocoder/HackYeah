@@ -7,6 +7,8 @@ django.setup()
 from accounts.models import User
 from places.models import Category, Place, PlaceImage, Review
 from titbits.models import Titbit 
+from quiz.models import Question, Answer
+
 
 # Add a user
 user = User.objects.create_user(
@@ -66,5 +68,17 @@ Review.objects.create(rating=4, comment="Pretty good.", user=user2, place=place2
 Review.objects.create(rating=3, comment="Average experience.", user=user3, place=place3)
 Review.objects.create(rating=4.5, comment="Almost perfect!", user=user, place=place4)
 Review.objects.create(rating=4.7, comment="Great overall.", user=user2, place=place5)
+
+
+question1 = Question.objects.create(place_id=place1.id, question_no=1, question_content="What year was Place 1 established?")
+Answer.objects.create(question=question1, answer_text="1900", is_correct=True)
+Answer.objects.create(question=question1, answer_text="1950", is_correct=False)
+Answer.objects.create(question=question1, answer_text="2000", is_correct=False)
+
+question2 = Question.objects.create(place_id=place2.id, question_no=1, question_content="Which cuisine does Place 2 specialize in?")
+Answer.objects.create(question=question2, answer_text="Italian", is_correct=True)
+Answer.objects.create(question=question2, answer_text="French", is_correct=False)
+Answer.objects.create(question=question2, answer_text="Indian", is_correct=False)
+
 
 print("Data seeded successfully!")

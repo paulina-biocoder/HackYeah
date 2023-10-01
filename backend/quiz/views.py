@@ -6,6 +6,14 @@ class QuestionList(generics.ListCreateAPIView):
     queryset = Question.objects.all()
     serializer_class = QuestionSerializers
 
-class AnswerList(generics.RetrieveUpdateDestroyAPIView):
+class AnswerList(generics.ListCreateAPIView):
     queryset = Answer.objects.all()
     serializer_class = AnswerSerializers
+
+
+class AnswerRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Answer.objects.all()
+    serializer_class = AnswerSerializers
+class QuestionRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Question.objects.all()
+    serializer_class = QuestionSerializers

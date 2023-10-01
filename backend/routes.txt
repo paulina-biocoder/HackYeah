@@ -142,3 +142,60 @@ PATCH  http://127.0.0.1:8000/accounts/<id>/
     "name": "Partial"
 }
 DELETE http://127.0.0.1:8000/accounts/<id>/
+
+
+
+
+
+# Questions:
+GET    http://127.0.0.1:8000/quiz/questions/
+POST   http://127.0.0.1:8000/quiz/questions/
+{
+    "place_id": 1,
+    "question_no": 1,
+    "question_content": "What is the capital of France?"
+}
+
+GET    http://127.0.0.1:8000/quiz/questions/<id>/
+PUT    http://127.0.0.1:8000/quiz/questions/<id>/
+{
+    "place_id": 1,
+    "question_no": 2,
+    "question_content": "Updated question content"
+}
+PATCH  http://127.0.0.1:8000/quiz/questions/<id>/
+{
+    "question_content": "Updated question content"
+}
+DELETE http://127.0.0.1:8000/quiz/questions/<id>/
+
+
+
+
+
+
+
+
+# Answers for a specific question:
+GET    http://127.0.0.1:8000/quiz/answers/
+POST   http://127.0.0.1:8000/quiz/answers/
+{
+    "question": <question_id>,
+    "answer_text": "Paris",
+    "is_correct": true
+}
+
+
+GET    http://127.0.0.1:8000/quiz/answers/<answer_id>/
+PUT    http://127.0.0.1:8000/quiz/answers/<answer_id>/
+{
+    "question": <question_id>,
+    "answer_text": "Berlin",
+    "is_correct": false
+}
+PATCH  http://127.0.0.1:8000/quiz/answers/<answer_id>/
+{
+    "answer_text": "Updated answer text"
+}
+DELETE http://127.0.0.1:8000/quiz/answers/<answer_id>/
+
