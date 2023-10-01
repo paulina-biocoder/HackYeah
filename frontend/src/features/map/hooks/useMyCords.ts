@@ -39,8 +39,8 @@ export function useMyCords() {
   };
 
   return {
-    coords: coords1,
-    // coords,
+    // coords: coords1,
+    coords,
     defaultCoords: defaultProps.center,
   };
 }

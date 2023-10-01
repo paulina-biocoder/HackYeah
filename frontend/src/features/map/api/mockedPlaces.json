@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "latitude": "50.067915",
+    "longitude": "19.941226",
+    "name": "Place 1",
+    "added_by": 1,
+    "is_visible": true,
+    "project_value": "1000.50",
+    "eu_funding": "800.40",
+    "category": 1,
+    "images": [
+      {
+        "id": 1,
+        "image": "http://127.0.0.1:8000/media/places/place1/image.jpg",
+        "description": null
+      }
+    ],
+    "reviews": [
+      {
+        "id": 1,
+        "user": 1,
+        "place": 1,
+        "comment": "Perfect!",
+        "rating": 5,
+        "created_at": "2023-10-01T07:12:57.948359Z"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "latitude": "50.065227",
+    "longitude": "19.930059",
+    "name": "Place 2",
+    "added_by": 2,
+    "is_visible": true,
+    "project_value": "1500.00",
+    "eu_funding": "1000.50",
+    "category": 2,
+    "images": [
+      {
+        "id": 2,
+        "image": "http://127.0.0.1:8000/media/places/place2/image.jpg",
+        "description": null
+      }
+    ],
+    "reviews": [
+      {
+        "id": 2,
+        "user": 2,
+        "place": 2,
+        "comment": "Pretty good.",
+        "rating": 4,
+        "created_at": "2023-10-01T07:12:57.948995Z"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "latitude": "50.063279",
+    "longitude": "19.946627",
+    "name": "Place 3",
+    "added_by": 3,
+    "is_visible": true,
+    "project_value": "500.00",
+    "eu_funding": "250.25",
+    "category": 3,
+    "images": [
+      {
+        "id": 3,
+        "image": "http://127.0.0.1:8000/media/places/place3/image.jpg",
+        "description": null
+      }
+    ],
+    "reviews": [
+      {
+        "id": 3,
+        "user": 3,
+        "place": 3,
+        "comment": "Average experience.",
+        "rating": 3,
+        "created_at": "2023-10-01T07:12:57.949436Z"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "latitude": "50.054863",
+    "longitude": "19.939466",
+    "name": "Place 4",
+    "added_by": 1,
+    "is_visible": true,
+    "project_value": "2000.00",
+    "eu_funding": "1500.75",
+    "category": 1,
+    "images": [
+      {
+        "id": 4,
+        "image": "http://127.0.0.1:8000/media/places/place4/image.jpg",
+        "description": null
+      }
+    ],
+    "reviews": [
+      {
+        "id": 4,
+        "user": 1,
+        "place": 4,
+        "comment": "Almost perfect!",
+        "rating": 4,
+        "created_at": "2023-10-01T07:12:57.949906Z"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "latitude": "50.055876",
+    "longitude": "19.924839",
+    "name": "Place 5",
+    "added_by": 2,
+    "is_visible": true,
+    "project_value": "3000.00",
+    "eu_funding": "2250.90",
+    "category": 2,
+    "images": [
+      {
+        "id": 5,
+        "image": "http://127.0.0.1:8000/media/places/place5/image.jpg",
+        "description": null
+      }
+    ],
+    "reviews": [
+      {
+        "id": 5,
+        "user": 2,
+        "place": 5,
+        "comment": "Great overall.",
+        "rating": 4,
+        "created_at": "2023-10-01T07:12:57.950315Z"
+      }
+    ]
+  }
+]

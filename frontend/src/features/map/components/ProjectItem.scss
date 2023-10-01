@@ -9,7 +9,7 @@
 
     &-title {
         color: #000;
-        font-family: Poppins;
+        // font-family: Poppins;
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
@@ -19,7 +19,7 @@
 
     &-stats {
         color: var(--ink-normal, #252525);
-        font-family: Poppins;
+        // font-family: Poppins;
         font-size: 16px;
         font-style: normal;
         font-weight: 600;
@@ -56,7 +56,7 @@
             background: none;
             color: var(--gray-800, #333f51);
             /* text-md/Semibold */
-            font-family: Poppins;
+            // font-family: Poppins;
             font-size: 16px;
             font-style: normal;
             font-weight: 600;
@@ -106,7 +106,7 @@
 
             &-title {
                 color: var(--ink-normal, #252525);
-                font-family: Poppins;
+                // font-family: Poppins;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 600;
@@ -117,7 +117,7 @@
             &-description {
                 margin-top: 2px;
                 color: var(--ink-standard, #717171);
-                font-family: Poppins;
+                // font-family: Poppins;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 400;
@@ -130,7 +130,7 @@
         color: var(--ink-normal, #252525);
         text-overflow: ellipsis;
         /* text-md/Regular */
-        font-family: Poppins;
+        // font-family: Poppins;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -140,7 +140,7 @@
         &-title {
             color: #000;
             /* text-xl/Bold */
-            font-family: Poppins;
+            // font-family: Poppins;
             font-size: 20px;
             font-style: normal;
             font-weight: 700;
@@ -156,7 +156,7 @@
         text-decoration: underline;
         color: var(--ink-normal, #252525);
         /* text-md/Bold */
-        font-family: Poppins;
+        // font-family: Poppins;
         font-size: 16px;
         font-style: normal;
         font-weight: 700;
