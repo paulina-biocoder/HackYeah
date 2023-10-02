@@ -6,7 +6,7 @@ import GoogleMapReact from "google-maps-react-markers";
 import { useRef, useState } from "react";
 import { PlaceTile } from "./components/places/PlaceTile";
 
-const apikey = "AIzaSyCKImaG10Oo2c-ETqEVlrQY553r25pWctI";
+const apikey = "your_api_key";
 
 export type LatLng = {
   lat: number;
